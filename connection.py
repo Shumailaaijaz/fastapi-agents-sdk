@@ -1,6 +1,7 @@
 import os
 from dotenv import load_dotenv
 from agents import AsyncOpenAI, OpenAIChatCompletionsModel, RunConfig, Agent, Runner
+from tools import fetch_url_metadata, analyze_text, web_search
 
 # Load environment variables
 load_dotenv()
@@ -43,10 +44,15 @@ def create_agent(api_key=None, model=None, name="Gemini Assistant", instructions
         model_provider=gemini_client,
     )
 
-    # Create agent
+    # Create agent with custom function tools
     agent = Agent(
         name=name,
         instructions=instructions,
+        tools=[
+            fetch_url_metadata,
+            analyze_text,
+            web_search,  # Web search using DuckDuckGo
+        ],
     )
 
     # Return both agent and config (needed for running)
