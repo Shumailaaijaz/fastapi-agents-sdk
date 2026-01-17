@@ -1,5 +1,9 @@
 README.md
 pyproject.toml
+src/fastapi_agents_sdk/__init__.py
+src/fastapi_agents_sdk/connection.py
+src/fastapi_agents_sdk/main.py
+src/fastapi_agents_sdk/tools.py
 src/fastapi_agents_sdk.egg-info/PKG-INFO
 src/fastapi_agents_sdk.egg-info/SOURCES.txt
 src/fastapi_agents_sdk.egg-info/dependency_links.txt

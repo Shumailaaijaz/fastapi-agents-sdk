@@ -1,6 +1,6 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
-from connection import create_agent, run_agent
+from fastapi_agents_sdk.connection import create_agent, run_agent
 
 app = FastAPI()
 

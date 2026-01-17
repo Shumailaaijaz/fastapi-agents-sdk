@@ -1,7 +1,8 @@
 import os
 from dotenv import load_dotenv
 from agents import AsyncOpenAI, OpenAIChatCompletionsModel, RunConfig, Agent, Runner
-from tools import fetch_url_metadata, analyze_text, web_search
+from fastapi_agents_sdk.tools import fetch_url_metadata, analyze_text, web_search
+
 
 # Load environment variables
 load_dotenv()
